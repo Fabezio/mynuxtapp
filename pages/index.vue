@@ -2,6 +2,7 @@
   <div class="container">
     <div>
       <!-- <logo /> -->
+      <b-avatar src="face_co.png" size="10em" variant="info"></b-avatar>
       <h1 class="title">
         fabezio_nuxtapp
       </h1>
