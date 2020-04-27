@@ -1,9 +1,9 @@
 import Vue from 'vue'
 import upperFirst from 'lodash/upperFirst'
 import camelCase from 'lodash/camelCase'
-import VueComp from '@vue/composition-api'
+// import VueComp from '@vue/composition-api'
 
-Vue.use(VueComp)
+// Vue.use(VueComp)
 
 const requireComponent = require.context(
   '@/components/main',

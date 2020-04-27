@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <logo />
+      <!-- <logo /> -->
       <h1 class="title">
         fabezio_nuxtapp
       </h1>
@@ -12,11 +12,7 @@
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
         </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
+        <a :href="ghLink" target="_blank" class="button--grey">
           GitHub
         </a>
       </div>
@@ -30,6 +26,11 @@
 export default {
   components: {
     // Logo
+  },
+  data() {
+    return {
+      ghLink: 'https://github.com/Fabezio/mynuxtapp.git'
+    }
   }
 }
 </script>
