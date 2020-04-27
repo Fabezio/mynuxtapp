@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <!-- <logo /> -->
-      <b-avatar src="face_co.png" size="10em" variant="info"></b-avatar>
+      <b-avatar rounded :src="avatar" size="10em" variant="none"></b-avatar>
       <h1 class="title">
         fabezio_nuxtapp
       </h1>
@@ -13,7 +13,7 @@
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
           Documentation
         </a>
-        <a :href="ghLink" target="_blank" class="button--grey">
+        <a :href="ghLink" target="_blank" class="bg-info button--grey">
           GitHub
         </a>
       </div>
@@ -30,7 +30,8 @@ export default {
   },
   data() {
     return {
-      ghLink: 'https://github.com/Fabezio/mynuxtapp.git'
+      ghLink: 'https://github.com/Fabezio/mynuxtapp.git',
+      avatar: 'avatars/face_co-400px.png'
     }
   }
 }
