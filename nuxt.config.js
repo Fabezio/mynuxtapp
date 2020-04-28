@@ -31,6 +31,7 @@ export default {
     '~/plugins/main',
     '~/plugins/logos',
     '~/plugins/navbar',
+    '~/plugins/footer',
     '~/plugins/icons'
   ],
   /*

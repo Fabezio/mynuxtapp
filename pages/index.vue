@@ -1,30 +1,29 @@
-<template>
-  <div class="container">
-    <div>
-      <!-- <logo /> -->
-      <b-avatar rounded :src="avatar" size="10em" variant="none"></b-avatar>
-      <h1 class="title">
-        Fabezio, Dévelppeur web
-      </h1>
-      <h2 class="subtitle">
-        Je code pour vous
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a :href="ghLink" target="_blank" class="bg-info button--grey">
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+<template lang="pug">
+b-container
+  div
+    b-row
+      b-col(cols='3')
+        b-avatar(rounded='', :src='avatar', size='10em', variant='none')
+      b-col(cols='9')
+        h1.title.text-left
+          | Fabezio, Développeur Web
+        h2.subtitle.text-left
+          | Je code pour vous
+    button.btn.btn-lg.btn-warning.my-5
+      nuxt-link.text-light.font-weight-bold(to='/home') ENTRER
+    .links
+      a.button--green(href='https://nuxtjs.org/', target='_blank')
+        | Documentation
+      a.bg-info.button--grey(:href='ghLink', target='_blank')
+        | GitHub
+
 </template>
 
 <script>
 // import Logo from '~/components/Logo.vue'
 
 export default {
+  layout: 'home',
   components: {
     // Logo
   },
