@@ -30,8 +30,8 @@ export default {
   plugins: [
     '~/plugins/main',
     // '~/plugins/logos',
-    // '~/plugins/navbar',
-    // '~/plugins/footer',
+    '~/plugins/navbar',
+    '~/plugins/footer',
     '~/plugins/icons'
   ],
   /*

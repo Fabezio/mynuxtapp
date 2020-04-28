@@ -6,9 +6,9 @@ import camelCase from 'lodash/camelCase'
 // Vue.use(VueComp)
 
 const requireComponent = require.context(
-  '@/components',
+  '@/components/main',
   false,
-  /^\w+\/[A-Z]\w+\.(vue|js)$/
+  /[A-Z]\w+\.(vue|js)$/
 )
 
 requireComponent.keys().forEach((fileName) => {

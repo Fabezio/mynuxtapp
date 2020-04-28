@@ -1,7 +1,7 @@
 <template lang="pug">
-div
-  b-alert(variant="warning" show)
-    h1.container
+div.vertical-middle
+  b-alert.alert.w-100.py-5(variant="warning" show)
+    h1.container.title
       b-icon.mr-3(icon='exclamation-triangle-fill')
       span Oops, cette page n'existe pas!
 
@@ -9,6 +9,7 @@ div
 
 <script>
 export default {
+  layout: 'home',
   data() {
     return {}
   }
@@ -16,6 +17,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-body
-  vertical-align middle
+alert
+  width 100%
+.title
+  font-size 3rem
+
+.vertical-middle
+  display flex
+  min-height 100vh
+  align-items center
 </style>
