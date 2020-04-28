@@ -1,4 +1,5 @@
 <template lang="pug">
+b-container
     h1 Bienvenue!
 
 </template>
