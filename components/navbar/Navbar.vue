@@ -10,8 +10,10 @@ div
       // Right aligned nav items
       b-navbar-nav.ml-auto
         SearchBox
-        b-nav-item-dropdown(text='Langues', right='' )
+        // cascade langues
+        // b-nav-item-dropdown(text='Langues', right='' )
           div(v-for='(lang, i) in languages', :key="i")
+            b-icon(:icon="lang.icon")
             b-dropdown-item(:href='lang.href') {{lang.label}}
             //- b-dropdown-item(href='#') ES
             //- b-dropdown-item(href='#') RU
@@ -32,10 +34,10 @@ export default {
   data() {
     return {
       languages: [
-        { href: '#', label: 'Anglais' },
-        { href: '#', label: 'Espagnol' },
-        { href: '#', label: 'Français' },
-        { href: '#', label: 'Allemand' }
+        { href: '#', label: 'Anglais', icon: 'x' },
+        { href: '#', label: 'Espagnol', icon: '' },
+        { href: '#', label: 'Français', icon: '' },
+        { href: '#', label: 'Allemand', icon: '' }
       ],
       user: [
         { href: '#', label: 'Profil' },

@@ -27,7 +27,12 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: ['~/plugins/main', '~/plugins/logos', '~/plugins/navbar'],
+  plugins: [
+    '~/plugins/main',
+    '~/plugins/logos',
+    '~/plugins/navbar',
+    '~/plugins/icons'
+  ],
   /*
    ** Nuxt.js dev-modules
    */

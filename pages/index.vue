@@ -4,10 +4,10 @@
       <!-- <logo /> -->
       <b-avatar rounded :src="avatar" size="10em" variant="none"></b-avatar>
       <h1 class="title">
-        fabezio_nuxtapp
+        Fabezio, Dévelppeur web
       </h1>
       <h2 class="subtitle">
-        mon cv en ligne
+        Je code pour vous
       </h2>
       <div class="links">
         <a href="https://nuxtjs.org/" target="_blank" class="button--green">
