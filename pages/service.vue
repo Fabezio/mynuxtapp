@@ -1,8 +1,7 @@
 <template lang="pug">
-b-footer
-    #footer.d-block.mx-auto
-        span fabezio
-        span {{new Date().getFullYear()}}
+main
+    h1 Services
+    
 </template>
 
 <script>
