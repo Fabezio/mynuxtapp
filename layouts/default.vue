@@ -2,7 +2,7 @@
 div
   #top-layout
     Navbar
-  #content-layout
+  .container
     nuxt
   #bottom-layout
     Footer
@@ -19,8 +19,13 @@ html
   -webkit-font-smoothing antialiased
   box-sizing border-box
 
-#content-layout
-  min-height 90%
+.container
+  margin 0 auto
+  min-height 85vh !important;
+  display flex
+  justify-content center
+  align-items center
+  text-align center
 
 *,
 *:before,

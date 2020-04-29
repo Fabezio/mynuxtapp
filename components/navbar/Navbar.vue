@@ -1,11 +1,16 @@
 <template lang="pug">
 div
   b-navbar(toggleable='lg', type='dark', variant='info')
-    b-navbar-brand(href='#') Fabezio
+    nuxt-link.mr-1(to='/home')
+      b-button(type='xl' variant='primary') Fabezio
     b-navbar-toggle(target='nav-collapse')
     b-collapse#nav-collapse(is-nav='')
       b-navbar-nav
-        b-nav-item(href='#') Menu
+        nuxt-link.mr-1(to='/home')
+          b-button.btn.text-light(pill variant='info') Accueil
+        nuxt-link.mr-1(to='/service')
+          b-button.btn.text-light(pill variant='info') Services
+
         //- b-nav-item(href='#', disabled='') Disabled
       // Right aligned nav items
       b-navbar-nav.ml-auto

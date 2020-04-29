@@ -1,7 +1,7 @@
 <template lang="pug">
 main
-    h1 Services
-    
+  h1 Services
+
 </template>
 
 <script>
