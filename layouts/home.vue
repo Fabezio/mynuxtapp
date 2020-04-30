@@ -1,12 +1,14 @@
 <template lang="pug">
-div
+.container
+  div
     nuxt
 </template>
 
 <style lang="stylus">
 .container
   margin 0 auto
-  min-height 100vh
+  padding auto
+  min-height 100vh !important
   display flex
   justify-content center
   align-items center

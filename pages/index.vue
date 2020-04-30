@@ -1,18 +1,18 @@
 <template lang="pug">
-b-container
+
   div
     b-row
       b-col(cols='3')
-        b-avatar(rounded='', :src='avatar', size='10em', variant='none')
+        b-avatar(rounded='', :src='avatar', size='12em', variant='none' style="position: relative; right: 8px")
       b-col(cols='9')
-        h1.title.text-left
+        h1.display-4.text-left
           | Fabezio, Développeur Web
-        h2.subtitle.text-left
+        h2.subtitle.font-italic.text-left.text-muted
           | Je code pour vous
-    b-button.btn.btn-lg.btn-warning.my-5
-      nuxt-link.text-light.font-weight-bold(to='/home') ENTRER
-    br
-    b-button-group.links
+    nuxt-link.text-light.font-weight-bold(to='/home')
+      b-button.my-4.btn-block.font-weight-bold(variant='info' size="lg") ENTRER
+    //- br
+    //- b-button-group.links
       b-button(variant='primary')
         a.text-light(href='https://nuxtjs.org/', target='_blank')
           | Documentation

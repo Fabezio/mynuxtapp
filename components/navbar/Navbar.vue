@@ -10,6 +10,8 @@ div
           b-button.btn.text-light(pill variant='info') Accueil
         nuxt-link.mr-1(to='/service')
           b-button.btn.text-light(pill variant='info') Services
+        nuxt-link.mr-1(to='/contact')
+          b-button.btn.text-light(pill variant='info') Contactez-moi
 
         //- b-nav-item(href='#', disabled='') Disabled
       // Right aligned nav items
