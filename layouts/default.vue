@@ -55,4 +55,8 @@ html
   &:hover
     color #fff
     background-color #35495e
+.content
+  text-align justify
+  li
+    list-style '=> '
 </style>
