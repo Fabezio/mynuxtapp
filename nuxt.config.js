@@ -29,7 +29,7 @@ export default {
    */
   plugins: [
     '~/plugins/main',
-    // '~/plugins/logos',
+    '~/plugins/forms',
     '~/plugins/navbar',
     '~/plugins/footer',
     '~/plugins/icons'

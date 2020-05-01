@@ -1,27 +1,26 @@
 <template lang="pug">
 div
-  Title(label='Contactez-moi!')
+  Title(placeholder='Contactez-moi!')
   form(@submit='checkForm')
-    b-form-input(type='text' v-model='firstname' placeholder='Nom:')
-    //- p.text-info(v-if='firstname') {{firstname || 'pas de nom entré'}}
-    //- p.text-danger(v-else='') pas de nom entré
     
-    b-form-input(type='email' v-model='email' placeholder='Email:')
-    //- p.text-info(v-if='email') {{email}}
-    //- p.text-danger(v-else='') pas d'email entré
-    //- b-form-input(type='text' v-model='firstname' placeholder='Nom:')
+    Input(type='text' icon='person' value='firstname', placeholder='Nom:')
+    Input(type='email' icon='envelope' value='email', placeholder='Email:')
+    Input(type='tel' icon='phone' value='phone', placeholder='Téléphone:')
+    
+    
     b-form-textarea(placeholder='entrez votre message ici' v-model='message')
     //- p.text-info(v-if='message') {{message || 'pas de nom entré'}}
     //- p.text-danger(v-else='') pas de message entré
 
 
-    b-button-group.btn-block
-      b-button.btn-block(@click='checkForm' role='submit' variant='warning') Soumettre
-      b-button.btn-block(variant='secondary') Annuler
+    b-button-group.btn-block.my-2
+      b-button(@click='checkForm' role='submit' variant='warning') Soumettre
+      b-button(variant='secondary' role='dismiss') Annuler
 
-  ul
-    div(v-for='(error, i) in errors', :key='i')
-      li.text-left {{error}}
+  p.text-left(v-if='errors.length') Les éléments suivants sont requis:
+    ul
+      div(v-for='(error, i) in errors', :key='i')
+        li.text-left {{error}}
         
 
 
@@ -34,6 +33,7 @@ export default {
     return {
       firstname: null,
       email: null,
+      phone: null,
       message: null,
       errors: []
     }
@@ -43,15 +43,18 @@ export default {
       this.errors = []
 
       if (!this.firstname) {
-        this.errors.push('Le nom est requis.')
+        this.errors.push('nom')
       }
       if (!this.email) {
-        this.errors.push('Votre email est requis.')
+        this.errors.push('adresse email')
       } else if (!this.validEmail(this.email)) {
-        this.errors.push('Le format de votre email doit être conforme.')
+        this.errors.push('le format de votre email doit être conforme')
+      }
+      if (!this.phone) {
+        this.errors.push('numéro de téléphone')
       }
       if (!this.message) {
-        this.errors.push('Le message est requis.')
+        this.errors.push('message')
 
         if (!this.errors.length) {
           return true
